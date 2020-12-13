@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.0/dist/axios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qs@6.9.4/dist/qs.js"></script>
+  <script>
+    axios({
+      method: 'GET',
+      // url: 'http://localhost:3000/',
+      // url: 'http://113.31.104.154:8010/menu/getAll',
+      url: 'http://edufront.lagou.com/front/user/login',
+      data: Qs.stringify({
+        password: '111111',
+        phone: '18201288771'
+      }),
+      // url: 'http://eduboss.lagou.com/boss/menu/getAll',
+      // headers: {
+      //   // Authorization
+      //   Authorization: '123',
+      //   // foo: 'bar'
+      // }
+    }).then(res => {
+      console.log(res)
+    })
+  </script>
+</body>
+</html>
